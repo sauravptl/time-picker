@@ -1,0 +1,46 @@
+<input
+  type="text"
+  [(ngModel)]="selectedTime"
+  (focus)="showTimePicker()"
+  readonly
+/>
+<div class="time-picker" *ngIf="showPicker">
+  <div class="hoursCounter">
+    <div
+      class="numberText"
+      *ngFor="let hour of hoursList"
+      [ngClass]="hour === selectedHour ? 'active' : ''"
+      (click)="selectedHour = hour"
+    >
+      {{ hour }}
+    </div>
+  </div>
+  <span>:</span>
+  <div class="hoursCounter">
+    <div
+      class="numberText"
+      *ngFor="let minute of minutesList"
+      [ngClass]="minute === selectedMinute ? 'active' : ''"
+      (click)="selectedMinute = minute"
+    >
+      {{ minute }}
+    </div>
+  </div>
+  <div class="hoursCounter">
+    <div
+      class="numberText"
+      (click)="selectedPeriod = 'AM'"
+      [ngClass]="'AM' === selectedPeriod ? 'active' : ''"
+    >
+      AM
+    </div>
+    <div
+      class="numberText"
+      (click)="selectedPeriod = 'PM'"
+      [ngClass]="'PM' === selectedPeriod ? 'active' : ''"
+    >
+      PM
+    </div>
+  </div>
+  <button (click)="setSelectedTime()">Set</button>
+</div>

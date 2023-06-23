@@ -1,0 +1,66 @@
+p {
+  font-family: Lato;
+}
+.time-picker {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 9999;
+  height: 150px;
+  display: flex;
+}
+
+.hoursCounter {
+  font-size: 14px;
+  height: 150px;
+  overflow: auto;
+  width: 28px;
+  margin: 0 4px;
+}
+.numberText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.numberText:hover {
+  background-color: #007bff73;
+}
+
+.time-picker select {
+  padding: 6px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.time-picker button {
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+}
+
+.time-picker button:hover {
+  background-color: #0056b3;
+}
+
+.hoursCounter {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.hoursCounter::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.active {
+  border-radius: 4px;
+  color: white;
+  padding: 4px;
+  background-color: #0056b3;
+}
